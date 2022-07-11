@@ -19,6 +19,7 @@ public class Principal {
         TransporteTaxi taxi = new TransporteTaxi();
         taxi.establecerCooperativaTaxi("Yahuarcuna");
         taxi.establecerTarifa();
+        
         TransporteTransvia transvia = new TransporteTransvia();
         transvia.establecerCooperativaTransvia("Cooperatuva de transvias");
         transvia.establecerTarifa();
@@ -27,8 +28,6 @@ public class Principal {
         lista.add(bus);
         lista.add(taxi);
         lista.add(transvia);
-        
-        
 
         TiposTransporte tipos = new TiposTransporte();
         tipos.establecerTransportes(lista);

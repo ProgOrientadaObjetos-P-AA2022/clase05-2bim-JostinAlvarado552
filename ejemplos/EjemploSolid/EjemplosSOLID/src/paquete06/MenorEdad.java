@@ -9,21 +9,21 @@ package paquete06;
  *
  * @author reroes
  */
-public class MenorEdad extends Persona{
-    
+public class MenorEdad extends Persona {
+
     private MayorEdad representante;
-           
-    public MenorEdad(String n, MayorEdad repre){
+
+    public MenorEdad(String n, MayorEdad repre) {
         super(n);
         representante = repre;
     }
-    
-    public void establecerRepresentante(MayorEdad m){
+
+    public void establecerRepresentante(MayorEdad m) {
         representante = m;
     }
-    
-    public MayorEdad obtenerRepresentante(){
+
+    public MayorEdad obtenerRepresentante() {
         return representante;
     }
-    
+
 }

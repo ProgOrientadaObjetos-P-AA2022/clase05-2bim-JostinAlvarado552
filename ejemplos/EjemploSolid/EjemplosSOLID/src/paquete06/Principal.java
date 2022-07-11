@@ -8,16 +8,18 @@ package paquete06;
  * @author reroes
  */
 public class Principal {
+
     public static void main(String[] args) {
-        
-        MayorEdad representante = new MayorEdad("José", "Visa");
-        
+TarjetaCredito tarjeta = new TarjetaCredito("Juan Alvarez","10239180",1000);
+        MayorEdad representante = new MayorEdad("José", tarjeta);
+
         MenorEdad menor = new MenorEdad("Felipe", representante);
-        
-        
-        System.out.printf("Nombre:%s - Tarjeta:%s\n",
-                menor.obtenerNombre(), 
-                menor.obtenerRepresentante().obtenerTarjeta());
-        
+
+        System.out.printf("Nombre:%s - Tarjeta:%s\n%s - %.2f\n",
+                menor.obtenerNombre(),
+                menor.obtenerRepresentante().obtenerTarjeta().obtenerNombre(),
+                menor.obtenerRepresentante().obtenerTarjeta().obtenerCodigo(),
+                menor.obtenerRepresentante().obtenerTarjeta().obtenerCupo());
+
     }
 }

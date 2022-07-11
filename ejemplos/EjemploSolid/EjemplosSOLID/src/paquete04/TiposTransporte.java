@@ -32,7 +32,7 @@ public class TiposTransporte {
         }
         promedioTarifas = suma / obtenerTransportes().size();
         
-    }
+}
     
     public double obtenerPromedioTarifas(){
         return promedioTarifas;
