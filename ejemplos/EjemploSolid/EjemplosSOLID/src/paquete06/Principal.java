@@ -10,7 +10,7 @@ package paquete06;
 public class Principal {
 
     public static void main(String[] args) {
-TarjetaCredito tarjeta = new TarjetaCredito("Juan Alvarez","10239180",1000);
+        TarjetaCredito tarjeta = new TarjetaCredito("MasterCard", "10239180", 1000);
         MayorEdad representante = new MayorEdad("José", tarjeta);
 
         MenorEdad menor = new MenorEdad("Felipe", representante);

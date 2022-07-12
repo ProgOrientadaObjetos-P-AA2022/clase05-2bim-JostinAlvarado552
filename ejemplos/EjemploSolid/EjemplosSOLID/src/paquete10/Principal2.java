@@ -4,7 +4,7 @@
  */
 package paquete10;
 
-public class Principal {
+public class Principal2 {
 
     public static void main(String[] args) {
 
@@ -14,9 +14,6 @@ public class Principal {
         GeneradorPeliculas gp = new GeneradorPeliculas();
         gp.establecerLlave(api);
         gp.establecerUrl("http://api.movie?api=");
-        System.out.println(gp.obtenerUrl());
-
-        System.out.println("---------------------------");
 
         APIAmazonMovie api2 = new APIAmazonMovie();
         api2.establecerApiKey("123455");
@@ -24,9 +21,6 @@ public class Principal {
         GeneradorPeliculas gp2 = new GeneradorPeliculas();
         gp2.establecerLlave(api2);
         gp2.establecerUrl("http://api.movie?api=");
-        System.out.println(gp2.obtenerUrl());
-
-        System.out.println("---------------------------");
 
         APIDirectvGo api3 = new APIDirectvGo();
         api3.establecerApiKey("123455");
@@ -34,17 +28,24 @@ public class Principal {
         GeneradorPeliculas gp3 = new GeneradorPeliculas();
         gp3.establecerLlave(api3);
         gp3.establecerUrl("http://api.movie?api=");
-        System.out.println(gp3.obtenerUrl());
-
-        System.out.println("---------------------------");
 
         APIStarPlus api4 = new APIStarPlus();
-        api4.establecerApiKey("123455");
+        api4.establecerApiKey("14545");
 
         GeneradorPeliculas gp4 = new GeneradorPeliculas();
         gp4.establecerLlave(api4);
         gp4.establecerUrl("http://api.movie?api=");
-        System.out.println(gp4.obtenerUrl());
 
+        String nombreArchivo = "Peliculas.data";
+        EscrituraArchivoSecuencial archivo = new EscrituraArchivoSecuencial(nombreArchivo);
+        archivo.establecerRegistroPeliculas(gp);
+        archivo.establecerSalida();
+        archivo.establecerRegistroPeliculas(gp2);
+        archivo.establecerSalida();
+        archivo.establecerRegistroPeliculas(gp3);
+        archivo.establecerSalida();
+        archivo.establecerRegistroPeliculas(gp4);
+        archivo.establecerSalida();
     }
+
 }

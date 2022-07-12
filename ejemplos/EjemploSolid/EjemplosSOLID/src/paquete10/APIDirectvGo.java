@@ -7,13 +7,13 @@ package paquete10;
 
 import java.io.Serializable;
 
-public class APIAmazonMovie implements APIMovie, Serializable {
+public class APIDirectvGo implements APIMovie, Serializable {
 
     private String apiKey;
 
     @Override
     public void establecerApiKey(String ak) {
-        apiKey = ak + "909090";
+        apiKey = ak + "808080";
     }
 
     @Override
